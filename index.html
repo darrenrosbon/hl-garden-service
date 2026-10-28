@@ -18,12 +18,12 @@
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="HL Garden Service logo over a lawn: landscaping, irrigation, tree felling, paving, painting and electrical, Midrand">
+<meta property="og:image:alt" content="HL Garden Service mark with lawns, irrigation, trees, paving, painting and electrical, Midrand">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="HL Garden Service | Landscaping and Garden Services in Midrand">
 <meta name="twitter:description" content="Landscaping, irrigation, tree felling, paving, painting and electrical work in Midrand and surrounds. Free quotes, call or WhatsApp 073 397 1256.">
 <meta name="twitter:image" content="https://darrenrosbon.github.io/hl-garden-service/og-image.jpg">
-<meta name="twitter:image:alt" content="HL Garden Service logo over a lawn: landscaping, irrigation, tree felling, paving, painting and electrical, Midrand">
+<meta name="twitter:image:alt" content="HL Garden Service mark with lawns, irrigation, trees, paving, painting and electrical, Midrand">
 <link rel="preload" as="image" imagesrcset="img/hero-1-480.webp 480w, img/hero-1-800.webp 800w, img/hero-1-1200.webp 1200w" imagesizes="(max-width: 767px) 200vw, 100vw" fetchpriority="high">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -31,7 +31,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&family=Sora:wght@500;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&family=Playfair+Display:wght@800;900&family=Sora:wght@500;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
 
 <style>
 /* ---------- Tokens (swap these to re-theme) ---------- */
@@ -281,7 +281,10 @@ main > section.section.process { position: relative; isolation: isolate; overflo
 .hs { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .hs1 { z-index: 1; object-position: 30% 50%; }
 .hs2 { z-index: 2; clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); }
-.hs3 { z-index: 3; object-position: 50% 55%; clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); }
+.hs3 { z-index: 3; clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); }
+.hs4 { z-index: 4; clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); }
+.hs5 { z-index: 5; clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); }
+.hs6 { z-index: 6; clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); }
 .hero-shield { display: block; width: 104px; height: auto; filter: drop-shadow(0 6px 18px rgba(0, 0, 0, .55)); }
 .hero-plate { display: grid; justify-items: center; gap: 8px; margin-top: 12px; }
 .hero-plate b { background: var(--leaf); color: #0b2819; font: 800 clamp(1.1rem, 5vw, 1.7rem)/1 "Sora", sans-serif; letter-spacing: .1em; padding: 7px 10px 7px 16px; border-radius: 5px; box-shadow: 0 6px 20px rgba(0, 0, 0, .45); }
@@ -303,29 +306,35 @@ main > section.section.process { position: relative; isolation: isolate; overflo
 .brand-stack .wm-main { justify-self: center; font-size: 1.5rem; padding: 7px 11px 7px 15px; }
 .brand-stack .wm-sub { font-size: .62rem; }
 @media (max-width: 380px) { .wm-main { font-size: 1rem; letter-spacing: .1em; } .wm-sub { letter-spacing: .14em; } }
+/* Seamless loop of 6 slides, 4s each: every slide wipes in over the previous one (the first wipes back in over the last),
+   and a slide only resets while the next one already covers it. */
 @media (prefers-reduced-motion: no-preference) {
-  /* Seamless loop: each slide wipes in over the previous one in turn (the first wipes back in over the last),
-     and a slide is only reset while the next one already covers it, so there is never a cut. 4s per slide. */
-  .hs { animation: slide 12s infinite; }
-  .hs1 { animation-delay: -.8s; }
+  .hs { animation: slide 24s infinite; }
+  .words span { animation: word 24s infinite; }
+  .hs1 { animation-delay: -0.8s; }
+  .words span:nth-child(1) { animation-delay: -0.8s; }
   .hs2 { animation-delay: 3.2s; }
-  .hs3 { animation-delay: 7.2s; }
-  .words span { animation: word 12s infinite; }
-  .words span:nth-child(1) { animation-delay: -.8s; }
   .words span:nth-child(2) { animation-delay: 3.2s; }
+  .hs3 { animation-delay: 7.2s; }
   .words span:nth-child(3) { animation-delay: 7.2s; }
+  .hs4 { animation-delay: 11.2s; }
+  .words span:nth-child(4) { animation-delay: 11.2s; }
+  .hs5 { animation-delay: 15.2s; }
+  .words span:nth-child(5) { animation-delay: 15.2s; }
+  .hs6 { animation-delay: 19.2s; }
+  .words span:nth-child(6) { animation-delay: 19.2s; }
 }
 @keyframes slide {
   0% { clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); z-index: 3; }
-  6.7%, 33.2% { clip-path: polygon(0 0, 130% 0, 100% 100%, 0 100%); z-index: 3; }
-  33.3%, 40% { clip-path: polygon(0 0, 130% 0, 100% 100%, 0 100%); z-index: 2; }
-  40.1%, 100% { clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); z-index: 1; }
+  3.33%, 16.62% { clip-path: polygon(0 0, 130% 0, 100% 100%, 0 100%); z-index: 3; }
+  16.67%, 20.00% { clip-path: polygon(0 0, 130% 0, 100% 100%, 0 100%); z-index: 2; }
+  20.04%, 100% { clip-path: polygon(0 0, 0 0, -30% 100%, 0 100%); z-index: 1; }
 }
 @keyframes word {
   0% { opacity: 0; transform: translateY(22px); }
-  8%, 30% { opacity: 1; transform: none; }
-  35% { opacity: 0; transform: translateY(-22px); }
-  35.1%, 100% { opacity: 0; transform: translateY(22px); }
+  3.75%, 14.17% { opacity: 1; transform: none; }
+  17.08% { opacity: 0; transform: translateY(-22px); }
+  17.12%, 100% { opacity: 0; transform: translateY(22px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .words { height: auto; width: auto; font-size: clamp(1.8rem, 8vw, 3rem); }
@@ -618,22 +627,35 @@ footer .foot-contact ul, footer .foot-jump ul { justify-content: center; justify
 .services-grid .svc-body { display: flex; flex-direction: column; }
 .services-grid .svc-cta { margin-top: auto; align-self: flex-start; padding: 13px 22px; }
 .services-grid .chips { margin-bottom: 22px; }
-.hl-logo { display: block; height: auto; filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, .6)) drop-shadow(0 4px 14px rgba(0, 0, 0, .5)); }
-.hl-logo-hero { width: clamp(220px, 64vw, 330px); }
-.hl-logo-foot { width: 220px; }
+.hl-lock { display: inline-flex; align-items: center; gap: 11px; }
+.hl-ico { width: 40px; height: 40px; flex: none; display: block; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .45)); }
+.hl-word { display: grid; gap: 5px; line-height: 1; }
+.hl-word b { font: 800 1.02rem/1 "Playfair Display", Georgia, serif; letter-spacing: .08em; color: #eef6e9; white-space: nowrap; }
+.hl-word i { font: 800 .5rem/1 "Nunito Sans", sans-serif; font-style: normal; letter-spacing: .26em; color: #8fe06b; white-space: nowrap; }
+.hl-stack { flex-direction: column; gap: 14px; text-align: center; }
+.hl-stack .hl-word { justify-items: center; gap: 8px; }
+.hl-stack .hl-word i { padding-left: .26em; }
+.hl-hero .hl-ico { width: clamp(110px, 32vw, 150px); height: auto; aspect-ratio: 1; filter: drop-shadow(0 4px 14px rgba(0, 0, 0, .55)); }
+.hl-hero .hl-word b { font-size: clamp(1.3rem, 5.6vw, 1.9rem); text-shadow: 0 0 2px rgba(0, 0, 0, .9), 0 2px 10px rgba(0, 0, 0, .85), 0 0 24px rgba(0, 0, 0, .6); }
+.hl-hero .hl-word i { font-size: clamp(.62rem, 2.5vw, .82rem); text-shadow: 0 2px 8px rgba(0, 0, 0, .8); }
+.brand-stack .hl-ico { width: 84px; height: 84px; }
+.brand-stack .hl-word b { font-size: 1.5rem; }
+.brand-stack .hl-word i { font-size: .62rem; }
+@media (max-width: 380px) { .hl-word b { font-size: .92rem; } .hl-ico { width: 36px; height: 36px; } }
 </style>
 <noscript><style>.img-fade { opacity: 1; }</style></noscript>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 8-11h-6z" fill="currentColor"/></symbol><symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 2 6 11h3l-3.5 5H11v6h2v-6h5.5L15 11h3z" fill="currentColor"/></symbol><symbol id="i-path" viewBox="0 0 24 24"><path d="M9 3h4l-1.5 5H14l2 4h-3l1 3h3l2 6H5l2-6h3l-1-3H6z" fill="currentColor"/></symbol><symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3C9 7.5 5.5 10.8 5.5 14.5a6.5 6.5 0 0 0 13 0C18.5 10.8 15 7.5 12 3z" fill="currentColor"/></symbol><symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 5h16l-6 7.5V19l-4 2v-8.5z" fill="currentColor"/></symbol><symbol id="i-pipe" viewBox="0 0 24 24"><path d="M3 5h8a4 4 0 0 1 4 4v1h4a2 2 0 0 1 2 2v1h-2v-1h-4v1a6 6 0 0 1-6 6H3v-2h6a4 4 0 0 0 4-4V9a2 2 0 0 0-2-2H3z" fill="currentColor"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5V20h-6v-6H9v6H3z" fill="currentColor"/></symbol><symbol id="i-roller" viewBox="0 0 24 24"><path d="M5 3h11a1 1 0 0 1 1 1v1h2a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-6v2h1v7h-3v-7h1v-2a1 1 0 0 1 1-1h7V7h-2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="currentColor"/></symbol><symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></symbol><symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></symbol><symbol id="i-check" viewBox="0 0 256 256"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></symbol><symbol id="i-clipboard-text" viewBox="0 0 256 256"><path d="M172,164a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h64A12,12,0,0,1,172,164Zm-12-52H96a12,12,0,0,0,0,24h64a12,12,0,0,0,0-24Zm60-64V216a20,20,0,0,1-20,20H56a20,20,0,0,1-20-20V48A20,20,0,0,1,56,28H90.53a51.88,51.88,0,0,1,74.94,0H200A20,20,0,0,1,220,48ZM100.29,60h55.42a28,28,0,0,0-55.42,0ZM196,52H178.59A52.13,52.13,0,0,1,180,64v8a12,12,0,0,1-12,12H88A12,12,0,0,1,76,72V64a52.13,52.13,0,0,1,1.41-12H60V212H196Z"/></symbol><symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm68-84a12,12,0,0,1-12,12H128a12,12,0,0,1-12-12V72a12,12,0,0,1,24,0v44h44A12,12,0,0,1,196,128Z"/></symbol><symbol id="i-list" viewBox="0 0 256 256"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"/></symbol><symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,60a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,60Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,124Zm0-112a92.1,92.1,0,0,0-92,92c0,77.36,81.64,135.4,85.12,137.83a12,12,0,0,0,13.76,0,259,259,0,0,0,42.18-39C205.15,170.57,220,136.37,220,104A92.1,92.1,0,0,0,128,12Zm31.3,174.71A249.35,249.35,0,0,1,128,216.89a249.35,249.35,0,0,1-31.3-30.18C80,167.37,60,137.31,60,104a68,68,0,0,1,136,0C196,137.31,176,167.37,159.3,186.71Z"/></symbol><symbol id="i-phone" viewBox="0 0 256 256"><path d="M224,154.8l-47.09-21.11-.18-.08a19.94,19.94,0,0,0-19,1.75,13.08,13.08,0,0,0-1.12.84l-22.31,19c-13-7.05-26.43-20.37-33.49-33.21l19.06-22.66a11.76,11.76,0,0,0,.85-1.15,20,20,0,0,0,1.66-18.83,1.42,1.42,0,0,1-.08-.18L101.2,32A20.06,20.06,0,0,0,80.42,20.15,60.27,60.27,0,0,0,28,80c0,81.61,66.39,148,148,148a60.27,60.27,0,0,0,59.85-52.42A20.06,20.06,0,0,0,224,154.8ZM176,204A124.15,124.15,0,0,1,52,80,36.29,36.29,0,0,1,80.48,44.46l18.82,42L80.14,109.28a12,12,0,0,0-.86,1.16A20,20,0,0,0,78,130.08c9.42,19.28,28.83,38.56,48.31,48A20,20,0,0,0,146,176.63a11.63,11.63,0,0,0,1.11-.85l22.43-19.07,42,18.81A36.29,36.29,0,0,1,176,204Z"/></symbol><symbol id="i-plant" viewBox="0 0 256 256"><path d="M255.62,51.65a12,12,0,0,0-11.27-11.27c-53.27-3.13-96.2,13.36-114.84,44.14-12.14,20-12.56,44.17-1.46,67.3a75.14,75.14,0,0,0-12.28,23l-12.66-12.66c7.19-16.77,6.43-34.11-2.4-48.69C86.73,90.36,54.89,78,15.55,80.27A12,12,0,0,0,4.28,91.55C2,130.89,14.36,162.73,37.45,176.71a49.76,49.76,0,0,0,26,7.27,57.54,57.54,0,0,0,22.7-4.87L112,205v23a12,12,0,0,0,24,0V198.51a51.63,51.63,0,0,1,9.49-29.95,76.82,76.82,0,0,0,32.1,7.39,64.91,64.91,0,0,0,33.89-9.46C242.25,147.85,258.76,104.92,255.62,51.65ZM49.88,156.18c-13.19-8-21.18-27.46-21.83-52.13,24.67.65,44.14,8.64,52.13,21.83a26,26,0,0,1,3.63,17L72.48,131.51a12,12,0,0,0-17,17l11.34,11.34A26.27,26.27,0,0,1,49.88,156.18ZM199.05,146c-10.66,6.45-23,7.67-35.81,3.76l37.25-37.24a12,12,0,0,0-17-17l-37.25,37.24C142.37,120,143.59,107.61,150,97c12.7-21,42.65-33,81.32-33H232C232.14,103,220.14,133.18,199.05,146Z"/></symbol><symbol id="i-whatsapp-logo" viewBox="0 0 256 256"><path d="M187.3,159.06A36.09,36.09,0,0,1,152,188a84.09,84.09,0,0,1-84-84A36.09,36.09,0,0,1,96.94,68.7,12,12,0,0,1,110,75.1l11.48,23a12,12,0,0,1-.75,12l-8.52,12.78a44.56,44.56,0,0,0,20.91,20.91l12.78-8.52a12,12,0,0,1,12-.75l23,11.48A12,12,0,0,1,187.3,159.06ZM236,128A108,108,0,0,1,78.77,224.15L46.34,235A20,20,0,0,1,21,209.66l10.81-32.43A108,108,0,1,1,236,128Zm-24,0A84,84,0,1,0,55.27,170.06a12,12,0,0,1,1,9.81l-9.93,29.79,29.79-9.93a12.1,12.1,0,0,1,3.8-.62,12,12,0,0,1,6,1.62A84,84,0,0,0,212,128Z"/></symbol><symbol id="i-x" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></symbol><symbol id="i-hand-tap" viewBox="0 0 256 256"><path d="M228,156v36c0,13.85-1.63,26.52-4.58,35.68a12,12,0,1,1-22.84-7.36c2.14-6.65,3.42-17.24,3.42-28.32V156a8,8,0,0,0-16,0v4a12,12,0,0,1-24,0V140a8,8,0,0,0-16,0v12a12,12,0,0,1-24,0V84a8,8,0,0,0-16,0V192a12,12,0,0,1-22.18,6.34l-18.68-30-.21-.34A8,8,0,0,0,53,175.92L78.27,217.8a12,12,0,0,1-20.56,12.39l-25.31-42-.12-.2A32,32,0,0,1,84,150.83V84a32,32,0,0,1,64,0v25a32,32,0,0,1,36.78,17A32,32,0,0,1,228,156ZM56,96A12,12,0,0,0,68,84a48,48,0,0,1,96,0,12,12,0,0,0,24,0A72,72,0,0,0,44,84,12,12,0,0,0,56,96Z"/></symbol><symbol id="i-tb-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></symbol><symbol id="i-tb-wa" viewBox="0 0 24 24"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="hl-leaf" viewBox="0 0 30 18"><path d="M1 17C1 7 9 1 29 1C29 13 19 18 1 17Z" fill="currentColor"/><path d="M3 15C11 11 19 7 27 2.5" stroke="#17492f" stroke-width="1.3" fill="none" stroke-linecap="round"/></symbol><symbol id="hl-mark" viewBox="0 0 200 200"><rect x="6" y="6" width="188" height="188" rx="46" fill="#17492f"/><rect x="6" y="6" width="188" height="188" rx="46" fill="none" stroke="#4cc84e" stroke-width="5"/><text x="82" y="140" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="104" fill="#eef6e9">H</text><text x="138" y="140" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="104" fill="#a8ff6a">L</text><g color="#a8ff6a"><use href="#hl-leaf" x="138" y="22" width="40" height="23" transform="rotate(-28 158 34)"/></g></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 8-11h-6z" fill="currentColor"/></symbol><symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 2 6 11h3l-3.5 5H11v6h2v-6h5.5L15 11h3z" fill="currentColor"/></symbol><symbol id="i-path" viewBox="0 0 24 24"><path d="M9 3h4l-1.5 5H14l2 4h-3l1 3h3l2 6H5l2-6h3l-1-3H6z" fill="currentColor"/></symbol><symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3C9 7.5 5.5 10.8 5.5 14.5a6.5 6.5 0 0 0 13 0C18.5 10.8 15 7.5 12 3z" fill="currentColor"/></symbol><symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 5h16l-6 7.5V19l-4 2v-8.5z" fill="currentColor"/></symbol><symbol id="i-pipe" viewBox="0 0 24 24"><path d="M3 5h8a4 4 0 0 1 4 4v1h4a2 2 0 0 1 2 2v1h-2v-1h-4v1a6 6 0 0 1-6 6H3v-2h6a4 4 0 0 0 4-4V9a2 2 0 0 0-2-2H3z" fill="currentColor"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5V20h-6v-6H9v6H3z" fill="currentColor"/></symbol><symbol id="i-roller" viewBox="0 0 24 24"><path d="M5 3h11a1 1 0 0 1 1 1v1h2a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-6v2h1v7h-3v-7h1v-2a1 1 0 0 1 1-1h7V7h-2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="currentColor"/></symbol><symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></symbol><symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></symbol><symbol id="i-check" viewBox="0 0 256 256"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></symbol><symbol id="i-clipboard-text" viewBox="0 0 256 256"><path d="M172,164a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h64A12,12,0,0,1,172,164Zm-12-52H96a12,12,0,0,0,0,24h64a12,12,0,0,0,0-24Zm60-64V216a20,20,0,0,1-20,20H56a20,20,0,0,1-20-20V48A20,20,0,0,1,56,28H90.53a51.88,51.88,0,0,1,74.94,0H200A20,20,0,0,1,220,48ZM100.29,60h55.42a28,28,0,0,0-55.42,0ZM196,52H178.59A52.13,52.13,0,0,1,180,64v8a12,12,0,0,1-12,12H88A12,12,0,0,1,76,72V64a52.13,52.13,0,0,1,1.41-12H60V212H196Z"/></symbol><symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm68-84a12,12,0,0,1-12,12H128a12,12,0,0,1-12-12V72a12,12,0,0,1,24,0v44h44A12,12,0,0,1,196,128Z"/></symbol><symbol id="i-list" viewBox="0 0 256 256"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"/></symbol><symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,60a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,60Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,124Zm0-112a92.1,92.1,0,0,0-92,92c0,77.36,81.64,135.4,85.12,137.83a12,12,0,0,0,13.76,0,259,259,0,0,0,42.18-39C205.15,170.57,220,136.37,220,104A92.1,92.1,0,0,0,128,12Zm31.3,174.71A249.35,249.35,0,0,1,128,216.89a249.35,249.35,0,0,1-31.3-30.18C80,167.37,60,137.31,60,104a68,68,0,0,1,136,0C196,137.31,176,167.37,159.3,186.71Z"/></symbol><symbol id="i-phone" viewBox="0 0 256 256"><path d="M224,154.8l-47.09-21.11-.18-.08a19.94,19.94,0,0,0-19,1.75,13.08,13.08,0,0,0-1.12.84l-22.31,19c-13-7.05-26.43-20.37-33.49-33.21l19.06-22.66a11.76,11.76,0,0,0,.85-1.15,20,20,0,0,0,1.66-18.83,1.42,1.42,0,0,1-.08-.18L101.2,32A20.06,20.06,0,0,0,80.42,20.15,60.27,60.27,0,0,0,28,80c0,81.61,66.39,148,148,148a60.27,60.27,0,0,0,59.85-52.42A20.06,20.06,0,0,0,224,154.8ZM176,204A124.15,124.15,0,0,1,52,80,36.29,36.29,0,0,1,80.48,44.46l18.82,42L80.14,109.28a12,12,0,0,0-.86,1.16A20,20,0,0,0,78,130.08c9.42,19.28,28.83,38.56,48.31,48A20,20,0,0,0,146,176.63a11.63,11.63,0,0,0,1.11-.85l22.43-19.07,42,18.81A36.29,36.29,0,0,1,176,204Z"/></symbol><symbol id="i-plant" viewBox="0 0 256 256"><path d="M255.62,51.65a12,12,0,0,0-11.27-11.27c-53.27-3.13-96.2,13.36-114.84,44.14-12.14,20-12.56,44.17-1.46,67.3a75.14,75.14,0,0,0-12.28,23l-12.66-12.66c7.19-16.77,6.43-34.11-2.4-48.69C86.73,90.36,54.89,78,15.55,80.27A12,12,0,0,0,4.28,91.55C2,130.89,14.36,162.73,37.45,176.71a49.76,49.76,0,0,0,26,7.27,57.54,57.54,0,0,0,22.7-4.87L112,205v23a12,12,0,0,0,24,0V198.51a51.63,51.63,0,0,1,9.49-29.95,76.82,76.82,0,0,0,32.1,7.39,64.91,64.91,0,0,0,33.89-9.46C242.25,147.85,258.76,104.92,255.62,51.65ZM49.88,156.18c-13.19-8-21.18-27.46-21.83-52.13,24.67.65,44.14,8.64,52.13,21.83a26,26,0,0,1,3.63,17L72.48,131.51a12,12,0,0,0-17,17l11.34,11.34A26.27,26.27,0,0,1,49.88,156.18ZM199.05,146c-10.66,6.45-23,7.67-35.81,3.76l37.25-37.24a12,12,0,0,0-17-17l-37.25,37.24C142.37,120,143.59,107.61,150,97c12.7-21,42.65-33,81.32-33H232C232.14,103,220.14,133.18,199.05,146Z"/></symbol><symbol id="i-whatsapp-logo" viewBox="0 0 256 256"><path d="M187.3,159.06A36.09,36.09,0,0,1,152,188a84.09,84.09,0,0,1-84-84A36.09,36.09,0,0,1,96.94,68.7,12,12,0,0,1,110,75.1l11.48,23a12,12,0,0,1-.75,12l-8.52,12.78a44.56,44.56,0,0,0,20.91,20.91l12.78-8.52a12,12,0,0,1,12-.75l23,11.48A12,12,0,0,1,187.3,159.06ZM236,128A108,108,0,0,1,78.77,224.15L46.34,235A20,20,0,0,1,21,209.66l10.81-32.43A108,108,0,1,1,236,128Zm-24,0A84,84,0,1,0,55.27,170.06a12,12,0,0,1,1,9.81l-9.93,29.79,29.79-9.93a12.1,12.1,0,0,1,3.8-.62,12,12,0,0,1,6,1.62A84,84,0,0,0,212,128Z"/></symbol><symbol id="i-x" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></symbol><symbol id="i-hand-tap" viewBox="0 0 256 256"><path d="M228,156v36c0,13.85-1.63,26.52-4.58,35.68a12,12,0,1,1-22.84-7.36c2.14-6.65,3.42-17.24,3.42-28.32V156a8,8,0,0,0-16,0v4a12,12,0,0,1-24,0V140a8,8,0,0,0-16,0v12a12,12,0,0,1-24,0V84a8,8,0,0,0-16,0V192a12,12,0,0,1-22.18,6.34l-18.68-30-.21-.34A8,8,0,0,0,53,175.92L78.27,217.8a12,12,0,0,1-20.56,12.39l-25.31-42-.12-.2A32,32,0,0,1,84,150.83V84a32,32,0,0,1,64,0v25a32,32,0,0,1,36.78,17A32,32,0,0,1,228,156ZM56,96A12,12,0,0,0,68,84a48,48,0,0,1,96,0,12,12,0,0,0,24,0A72,72,0,0,0,44,84,12,12,0,0,0,56,96Z"/></symbol><symbol id="i-tb-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></symbol><symbol id="i-tb-wa" viewBox="0 0 24 24"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></symbol></defs></svg>
 
 <header class="site-head">
   <div class="wrap head-in">
     <a class="brand" href="#top" aria-label="HL Garden Service, home">
-      <span class="wm"><span class="wm-main wm-long">HL GARDEN SERVICE</span><span class="wm-sub">Lawn care &amp; garden service</span></span>
+      <span class="hl-lock"><svg class="hl-ico" viewBox="0 0 200 200" aria-hidden="true"><use href="#hl-mark"/></svg><span class="hl-word"><b>HL GARDEN SERVICE</b><i>LAWN CARE &amp; GARDEN SERVICE</i></span></span>
     </a>
     <nav class="nav-desktop" aria-label="Main">
       <a href="#services">Services</a>
+      <a href="#work">Our work</a>
       <a href="#why">Why us</a>
       <a href="#areas">Areas</a>
       <a href="#quote">Quote</a>
@@ -647,6 +669,7 @@ footer .foot-contact ul, footer .foot-jump ul { justify-content: center; justify
 
 <nav class="nav-mobile" id="menu" aria-label="Mobile">
   <a class="link" href="#services">Services <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+  <a class="link" href="#work">Our work <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
   <a class="link" href="#why">Why us <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
   <a class="link" href="#areas">Areas and hours <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
   <a class="link" href="#quote">Quote <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
@@ -658,13 +681,16 @@ footer .foot-contact ul, footer .foot-jump ul { justify-content: center; justify
   <!-- Hero: image first, text overlaid -->
   <section class="hero ph" aria-labelledby="hero-title" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoUAA0APu1kqU2ppaOiMAgBMB2JQBOmUGYWiTLG++MQgG+AAPx/PQ2gyMnIh2RLpYcbwKX8racH2Ot8S/iddkPBCrMtATB8kupIQkiZZ8yE7rb8f34JggMMt7A06fynA1ESQWadwAA=)">
     <div class="hero-slides" aria-hidden="true">
-      <img class="hs hs1" src="img/hero-1-800.webp" srcset="img/hero-1-480.webp 480w, img/hero-1-800.webp 800w, img/hero-1-1200.webp 1200w, img/hero-1-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1067" alt="" fetchpriority="high" decoding="async">
-      <img class="hs hs2" src="img/hero-2-800.webp" srcset="img/hero-2-480.webp 480w, img/hero-2-800.webp 800w, img/hero-2-1200.webp 1200w, img/hero-2-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="972" alt="" loading="lazy" decoding="async">
-      <img class="hs hs3" src="img/hero-3-800.webp" srcset="img/hero-3-480.webp 480w, img/hero-3-800.webp 800w, img/hero-3-1200.webp 1200w, img/hero-3-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1200" alt="" loading="lazy" decoding="async">
+      <img class="hs hs1" src="img/hero-1-800.webp" srcset="img/hero-1-480.webp 480w, img/hero-1-800.webp 800w, img/hero-1-1200.webp 1200w, img/hero-1-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1067" alt="" style="object-position: 50% 55%" fetchpriority="high" decoding="async">
+      <img class="hs hs2" src="img/hero-2-800.webp" srcset="img/hero-2-480.webp 480w, img/hero-2-800.webp 800w, img/hero-2-1200.webp 1200w, img/hero-2-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1064" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async">
+      <img class="hs hs3" src="img/hero-3-800.webp" srcset="img/hero-3-480.webp 480w, img/hero-3-800.webp 800w, img/hero-3-1200.webp 1200w, img/hero-3-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="972" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async">
+      <img class="hs hs4" src="img/hero-4-800.webp" srcset="img/hero-4-480.webp 480w, img/hero-4-800.webp 800w, img/hero-4-1200.webp 1200w, img/hero-4-1600.webp 1600w" sizes="100vw" width="1600" height="2400" alt="" style="object-position: 50% 45%" loading="lazy" decoding="async">
+      <img class="hs hs5" src="img/hero-5-800.webp" srcset="img/hero-5-480.webp 480w, img/hero-5-800.webp 800w, img/hero-5-1200.webp 1200w, img/hero-5-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1067" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async">
+      <img class="hs hs6" src="img/hero-6-800.webp" srcset="img/hero-6-480.webp 480w, img/hero-6-800.webp 800w, img/hero-6-1200.webp 1200w, img/hero-6-1600.webp 1600w" sizes="(max-width: 767px) 200vw, 100vw" width="1600" height="1067" alt="" style="object-position: 50% 45%" loading="lazy" decoding="async">
     </div>
     <div class="wrap hero-in">
-      <img class="hl-logo hl-logo-hero" src="img/logo-640.webp" srcset="img/logo-640.webp 640w, img/logo-1000.webp 1000w" sizes="(max-width: 767px) 66vw, 340px" width="1000" height="1063" alt="" decoding="async">
-      <h1 id="hero-title"><span class="sr-only">HL Garden Service: landscaping, irrigation, tree felling, paving, painting and electrical work in Midrand</span><span class="words" aria-hidden="true"><span>Lawns.</span><span>Trees.</span><span>Gardens.</span></span></h1>
+      <div class="hl-lock hl-stack hl-hero" aria-hidden="true"><svg class="hl-ico" viewBox="0 0 200 200" aria-hidden="true"><use href="#hl-mark"/></svg><span class="hl-word"><b>HL GARDEN SERVICE</b><i>LAWN CARE &amp; GARDEN SERVICE</i></span></div>
+      <h1 id="hero-title"><span class="sr-only">HL Garden Service: lawns, irrigation, tree felling, paving, painting and electrical work in Midrand</span><span class="words" aria-hidden="true"><span>Lawns.</span><span>Irrigation.</span><span>Trees.</span><span>Paving.</span><span>Painting.</span><span>Electrical.</span></span></h1>
       <p>Landscaping, irrigation, tree felling, paving, painting and electrical work for homes and businesses. Call or WhatsApp for a free quote.</p>
       <div class="hero-cta">
         <a class="btn btn-light" href="#quote"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Get a free quote</a>
@@ -754,6 +780,20 @@ footer .foot-contact ul, footer .foot-jump ul { justify-content: center; justify
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Our work -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <h2 class="reveal">Our work</h2>
+      <p class="lead reveal">A few recent jobs.</p>
+      <div class="gallery work-gallery">
+        <figure class="reveal"><img class="img-fade" decoding="async" loading="lazy" src="img/work-1-480.webp" srcset="img/work-1-480.webp 480w, img/work-1-lg.webp 720w" sizes="(min-width: 1024px) 25vw, 50vw" width="480" height="647" alt="Neat green lawn beside a pool with brick paving"><figcaption class="tag">Lawns</figcaption></figure>
+        <figure class="reveal"><img class="img-fade" decoding="async" loading="lazy" src="img/work-2-480.webp" srcset="img/work-2-480.webp 480w, img/work-2-lg.webp 720w" sizes="(min-width: 1024px) 25vw, 50vw" width="480" height="640" alt="Worker preparing a house wall for painting on a balcony"><figcaption class="tag">Painting</figcaption></figure>
+        <figure class="reveal"><img class="img-fade" decoding="async" loading="lazy" src="img/work-3-480.webp" srcset="img/work-3-480.webp 480w" sizes="(min-width: 1024px) 25vw, 50vw" width="468" height="1040" alt="Long strip of fresh lawn beside a brick edge and a modern house"><figcaption class="tag">Lawns</figcaption></figure>
+        <figure class="reveal"><img class="img-fade" decoding="async" loading="lazy" src="img/work-4-480.webp" srcset="img/work-4-480.webp 480w, img/work-4-lg.webp 720w" sizes="(min-width: 1024px) 25vw, 50vw" width="480" height="319" alt="Swimming pool being worked on beside a modern house"><figcaption class="tag">Painting</figcaption></figure>
       </div>
     </div>
   </section>
@@ -916,7 +956,7 @@ footer .foot-contact ul, footer .foot-jump ul { justify-content: center; justify
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand brand-stack" href="#top">
-      <img class="hl-logo hl-logo-foot" src="img/logo-640.webp" width="1000" height="1063" alt="HL Garden Service" decoding="async" loading="lazy">
+      <span class="hl-lock hl-stack"><svg class="hl-ico" viewBox="0 0 200 200" aria-hidden="true"><use href="#hl-mark"/></svg><span class="hl-word"><b>HL GARDEN SERVICE</b><i>LAWN CARE &amp; GARDEN SERVICE</i></span></span>
     </a>
         <p class="foot-blurb" style="margin-top:10px;max-width:34ch;font-size:.95rem">Landscaping, irrigation, tree felling, paving, painting and electrical work in Midrand and surrounds.</p>
       </div>
@@ -932,6 +972,7 @@ footer .foot-contact ul, footer .foot-jump ul { justify-content: center; justify
         <h3>Jump to</h3>
         <ul>
           <li><a href="#services">Services</a></li>
+          <li><a href="#work">Our work</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#why">Why us</a></li>
           <li><a href="#areas">Areas</a></li>
